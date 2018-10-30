@@ -8,6 +8,14 @@
     <title>As-wm</title>
 </head>
 <body>
-    
+    <div id="main">
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Sobre mi</a></li>
+                <li><a href="#">Portafolio</a></li>
+                <li><a href="#">Contacto</a></li>                
+            </ul>
+        </nav>
+    </div>
 </body>
 </html>

@@ -13,6 +13,6 @@ module.exports = {
       
         require('postcss-font-magician'),
         require('css-mqpacker'),
-        require('cssnano'),
+       /* require('cssnano'),*/
     ]
   }

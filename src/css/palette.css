@@ -1,0 +1,9 @@
+/* RGB PALETTE */
+:root {
+    --primary-color: rgb(247, 248, 250);
+    --primary-light-color: #42F2F7;
+    --second-color: rgba(70, 172, 194, 1);
+    --third-color: rgba(73, 140, 138, 1);
+    --enfacy-font-color: rgba(75, 104, 88, 1);
+    --font-color: rgba(77, 71, 48, 1);
+}
