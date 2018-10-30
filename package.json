@@ -1,0 +1,23 @@
+{
+  "name": "www.as-wm.com",
+  "version": "1.0.0",
+  "description": "as-mw website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "As-wm",
+  "license": "ISC",
+  "dependencies": {
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.7",
+    "postcss-apply": "^0.11.0",
+    "postcss-cli": "^6.0.1",
+    "postcss-custom-media": "^7.0.7",
+    "postcss-custom-selectors": "^5.1.2",
+    "postcss-font-magician": "^2.2.1",
+    "postcss-import": "^12.0.1",
+    "postcss-nesting": "^7.0.0",
+    "postcss-preset-env": "^6.3.0"
+  }
+}
