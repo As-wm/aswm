@@ -4,6 +4,8 @@
 }
 
 body {
+    display: flex;
+    flex-direction: row;
     background: var(--primary-color);
     font-family: 'system.ui', 'arial', 'sans-serif';
 }

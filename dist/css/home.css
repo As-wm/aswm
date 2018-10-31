@@ -4,12 +4,49 @@
     padding: 0%;
 }
 body {
+    display: flex;
+    flex-direction: row;
     background: rgb(247, 248, 250);
     font-family: 'system.ui', 'arial', 'sans-serif';
 }
 #main {
-    
+    display: flex;
+    width: 70vw;
+    flex-direction: row
 }
+#main .arrow {
+        position: absolute;
+        width: 200px;
+        height: 110px;        
+        overflow: hidden;
+        background-image: url('../../images/arrow.png');
+        background-repeat: no-repeat;
+        -webkit-animation-name: arrow;
+                animation-name: arrow;
+        -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+    }
+@-webkit-keyframes arrow {
+    0% {left: 250px; top: 195px}
+    50% {left: 220px; top: 195px}
+    100% {left: 250px; top: 195px}    
+}
+@keyframes arrow {
+    0% {left: 250px; top: 195px}
+    50% {left: 220px; top: 195px}
+    100% {left: 250px; top: 195px}    
+}
+.bienvenida {
+    position: absolute;
+    left: 500px;   
+    top: 220px
+}
+.bienvenida p {
+        font-size: 3em;
+        color: rgba(77, 71, 48, 1);
+     }
 .nav {
     display: flex;
     background: rgba(73, 140, 138, 1);
@@ -52,4 +89,48 @@ body {
           }
 .nav ul li:first-child {
         margin-top: 20vh;        
+    }
+.side-bar {
+    display: block;
+    width: 30vw;
+    height: 100vh;
+    background: rgba(73, 140, 138, 1);
+    box-shadow: 0px 0px 5px 5px #c8e2e6;
+}
+.hidden {
+    display: none;
+}
+.img {
+    display: block;
+    width: 100%
+}
+.img img {
+        display: block;
+        border-radius: 15px;    
+        margin: 20px auto;
+        border: 5px solid rgb(247, 248, 250);
+        box-sizing:border-box;
+    }
+.side-bar .about-title {
+    /*background: red;*/
+}
+.side-bar .about-title h1 {
+        text-align: center; 
+        color: #42F2F7;
+        /*text-shadow: 5px 5px 5px var(--font-color);*/
+        text-shadow: 5px 5px 5px black;
+        font-size: 2.5em;
+    }
+.side-bar .paragraph {
+    background: rgba(75, 104, 88, 1);
+    border: 3px solid rgba(77, 71, 48, 1);
+    box-shadow: 5px 5px 5px black;
+    border-radius: 10px;
+    margin: 40px 20px
+}
+.side-bar .paragraph p {
+    color: rgb(247, 248, 250);
+    text-align: justify;
+    padding: 20px 10px;
+    font-size: 1.3em;
     }

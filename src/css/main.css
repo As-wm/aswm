@@ -1,3 +1,31 @@
 #main {
-    
+    display: flex;
+    width: 70vw;
+    flex-direction: row;
+    & .arrow {
+        position: absolute;
+        width: 200px;
+        height: 110px;        
+        overflow: hidden;
+        background-image: url('../../images/arrow.png');
+        background-repeat: no-repeat;
+        animation-name: arrow;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+}
+@keyframes arrow {
+    0% {left: 250px; top: 195px}
+    50% {left: 220px; top: 195px}
+    100% {left: 250px; top: 195px}    
+}
+
+.bienvenida {
+    position: absolute;
+    left: 500px;   
+    top: 220px;
+     & p {
+        font-size: 3em;
+        color: var(--font-color);
+     }
 }

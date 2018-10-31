@@ -16,6 +16,21 @@
                 <li><a href="#">Contacto</a></li>                
             </ul>
         </nav>
+        <div class="arrow"></div>
+        <div class="bienvenida">
+            <p>Bienvenido, </br> elige una opción</p>
+        </div>
+    </div>
+    <div class="side-bar ">
+          <div class="img">
+              <img src="images/me.jpg" alt="As-wm">
+          </div>
+          <div class="about-title">
+              <h1>As-Webmaster</h1>
+          </div>
+          <div class="paragraph">
+              <p>Estudiante permanente de Ciencias de Computación. He realizado cursos con HTML, CSS, postCSS, Bootstrap, Font-Awesome, JS, Ajax, PHP, MySQL, Vue.js, Prototipado, Git y Github, y sigo... tambien tengo amplia experiencia en Photophosp, Corel-Draw, Gravit Designer.</p>
+          </div>
     </div>
 </body>
 </html>
