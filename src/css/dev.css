@@ -1,5 +1,7 @@
+@import '/spinner.css';
 @import './palette.css';
 @import './body.css';
 @import './main.css';
 @import './nav.css';
 @import './side-bar.css';
+@import './footer.css'; 

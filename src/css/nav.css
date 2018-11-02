@@ -1,14 +1,14 @@
 .nav {
-    display: flex;
-    background: var(--third-color);
-    width: 0%;
-    height: 100vh;
-  & ul {
+    display: block;
+    position: fixed;
+    width: 11em;
+    height: 100%;
+    & ul {
       display: flex;
       flex-direction: column;
       & li {
           position: relative;
-          left: -160px;
+          left: -166px;
           display: flex;
           list-style: none;
           min-height: 14px;
