@@ -48,7 +48,33 @@ window.onload = function(){
         showBar.setAttributeNode(att);
     }
     
-    
+    setTimeout(
+        function(){ 
+    var leftArrow = document.getElementById('left-arrow');
+        leftArrow.removeAttribute('class');
+        var cls = document.createAttribute('class');
+        cls.value = "arrow vanish";
+        leftArrow.setAttributeNode(cls);
+
+    var wlcText = document.getElementById('wlc-text');
+        wlcText.removeAttribute('class');
+        var cls2 = document.createAttribute('class');
+        cls2.value = "vanish";
+        wlcText.setAttributeNode(cls2);
+
+            setTimeout(function(){
+                cls.value = 'destroy';
+                cls2.value = 'destroy';
+            }, 3000);
+
+       }, 5000);
+
+
+
+
+
+
+
 }
 
 

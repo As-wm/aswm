@@ -20,7 +20,7 @@
         <div id="arrow-box" class="arrow-box">
             <div id="left-arrow" class="arrow"></div>
         </div>
-        <div id="wlc" class="bienvenida"><p>Bienvenido, </br> elige una opción</p></div>
+        <div id="wlc" class="bienvenida"><p id="wlc-text" class="" >Bienvenido, </br> elige una opción</p></div>
         <footer id="foo">
             <div class="social-networks">
                 <div class="caja-img"><a target="_blank" href="https://github.com/As-wm"><img class="github" src="images/github.png" alt="github"></a></div>
@@ -40,6 +40,9 @@
           <div class="paragraph">
               <p>Estudiante permanente de Ciencias de Computación. He realizado cursos con HTML, CSS, postCSS, Bootstrap, Font-Awesome, JS, Ajax, PHP, MySQL, Vue.js, Prototipado, Git y Github, y sigo... tambien tengo amplia experiencia en Photophosp, Corel-Draw, Gravit Designer.</p>
           </div>
-        </div>
+    </div>
+    <div id="briefcase" class="briefcase">
+        
+    </div>
 </body>
 </html>

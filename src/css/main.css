@@ -39,3 +39,9 @@ main {
         color: var(--font-color);
      }
 }
+
+.vanish {
+    opacity: 0 !important;
+    transition: 3s;
+}
+

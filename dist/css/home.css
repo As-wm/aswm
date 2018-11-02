@@ -178,6 +178,13 @@ main .arrow {
 
 
 
+.vanish {
+    opacity: 0 !important;
+    transition: 3s;
+}
+
+
+
 .nav {
     display: block;
     position: fixed;
