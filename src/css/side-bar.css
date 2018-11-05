@@ -3,12 +3,26 @@
     --side-bar {
         display: block;
         position: fixed;
-        right: -405px;
+        right: -25.7em;
         width: 30%;
+        max-width: 25.7em;
         min-width: 25em;
-        height: 100%;
-        min-height: 100vh;
+        height: 100vh;
+        min-height: 100%;
         background: var(--third-color);
+        box-shadow: 0px 0px 5px 5px #c8e2e6;
+        box-sizing: border-box;        
+    }
+    --side-bar-contact {
+        display: block;
+        position: fixed;
+        right: -25.7em;
+        width: 25.7em;
+        max-width: 25.7em;
+        min-width: 25.7em;
+        height: 100vh;
+        min-height: 100vh;
+        background: var(--second-color);
         box-shadow: 0px 0px 5px 5px #c8e2e6;
         box-sizing: border-box;        
     }
@@ -21,30 +35,37 @@
 .side-bar {
     @apply --side-bar;
 }
+.contact {
+    @apply --side-bar-contact;
+}
 .show {
-    transform: translate(-405px, 0px);
+    transform: translate(-25.7em, 0px);
     position: relative;
-    transition: 1s;
+    transition: 1.5s;
     
 }
 .destroy {
     visibility: hidden;
 }
 .hidden {
-    transform: translate(405px, 0px);
+    transform: translate(25.7em, 0px);
     position: fixed;
-    transition: 1s;
+    transition: 0.5s;
 }
 .img {
     display: block;
-    width: 100%;
+    margin: 0 auto;
+    width: 15em;
+    height: 15em;
     & img {
         display: block;
+        width: 100%;
         border-radius: 15px;    
         box-sizing: border-box;
         margin: 20px auto;
         border: 5px solid var(--primary-color);
         box-shadow: 5px 5px 5px black;
+        overflow: hidden;
     }
 }
 

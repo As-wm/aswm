@@ -2,21 +2,25 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="dist/css/home.css">
     <script src="src/js/home.js"></script>
     <title>As-wm</title>
 </head>
 <body>
+    <div id="spinner" >
+        <div class="loader">Loading...</div>
+    </div>
     <nav id="nav" class="nav">
-        <ul>
+        <ul id="ul">
             <li><a href="#"id="btn-about" >Sobre mi</a></li>
-            <li><a href="#" id="btn-portafolio">Portafolio</a></li>
+            <li><a href="#" id="btn-briefcase">Portafolio</a></li>
             <li><a href="#" id="btn-contact">Contacto</a></li>                
         </ul>
     </nav>
-    <main>
+    <main id="main">
         <div id="arrow-box" class="arrow-box">
             <div id="left-arrow" class="arrow"></div>
         </div>
@@ -30,19 +34,6 @@
             </div>
         </footer>
     </main>
-    <div id="side-bar" class="side-bar"> 
-          <div class="img">
-              <img src="images/me.jpg" alt="As-wm">
-          </div>
-          <div class="about-title">
-              <h1>As-Webmaster</h1>
-          </div>
-          <div class="paragraph">
-              <p>Estudiante permanente de Ciencias de Computación. He realizado cursos con HTML, CSS, postCSS, Bootstrap, Font-Awesome, JS, Ajax, PHP, MySQL, Vue.js, Prototipado, Git y Github, y sigo... tambien tengo amplia experiencia en Photophosp, Corel-Draw, Gravit Designer.</p>
-          </div>
-    </div>
-    <div id="briefcase" class="briefcase">
-        
-    </div>
+    <div id="side-bar" class="side-bar"></div>
 </body>
 </html>

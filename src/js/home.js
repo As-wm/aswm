@@ -1,80 +1,347 @@
 window.onload = function(){
-    /* Spinner DOM Elements*/
+    
     (function(){
-        var element2 = document.createElement('div');
-        var id =  document.createAttribute('Id');
-        id.value = "spinner";
-        element2.setAttributeNode(id);
-        var vody = document.getElementsByTagName('body');
-        vody.appendChild = element2;
-        var nav = document.getElementById('nav');
-        document.body.insertBefore(element2, nav);
 
-        var element = document.createElement('div');
-        var att = document.createAttribute('class');
-        att.value = "loader";
-        element.setAttributeNode(att);
-        element.innerHTML = 'Loading...';
-        var spinner = document.getElementById('spinner');
-        spinner.appendChild(element);
+        showSideBar = function() {
+            /* Add class show to side-bar */
+            var showBar =document.getElementById("side-bar");
+            showBar.removeAttribute("class");
+            var att = document.createAttribute("class");
+            att.value = "side-bar show";
+            showBar.setAttributeNode(att); 
+        } 
 
-        setTimeout(
-            function(){ 
-                var spinner = document.getElementById("spinner");
-                var att = document.createAttribute('class');
-                att.value = "destroy";
-                element2.setAttributeNode(att);
-            }, 2000);
+        hiddenSideBar = function(){
+            var showBar =document.getElementById("side-bar");
+            showBar.removeAttribute("class");
+            var att = document.createAttribute("class");
+            att.value = "side-bar hidden";
+            showBar.setAttributeNode(att);
+        }
+        
+        boxCleaner = function(){
+            if(clicked==0){
+                if (content==1) {aboutBar();} 
+                    else if (content==2){briefcaseBar();}
+                         else if (content==3) {contactBar();}
+                } else if (clicked==1) {
+                    var showBar = document.getElementById("side-bar");
+                    var showBarImgProfile = document.getElementById('img-profile');
+                    var showBarAboutTitle = document.getElementById('about-title');
+                    var showBarParagraphProfile = document.getElementById('paragraph-profile');
+                        /* DESTROY ACCION */
+                        showBar.removeChild(showBarImgProfile);
+                        showBar.removeChild(showBarAboutTitle);
+                        showBar.removeChild(showBarParagraphProfile);
+                    clicked = 0;
+                    boxCleaner();
+                } else if (clicked==2) {
+                    
+                    clicked = 0;
+                    boxCleaner();
+                } else if (clicked==3) {
+                    var sideBar = document.getElementById("side-bar");
+                    var contactBox = document.getElementById("contact-box");
+                    var divForm = document.getElementById('form');
+                        var input1 = document.getElementsByTagName('input')[0];
+                        var input2 = document.getElementsByTagName('input')[1];
+                        var textArea = document.getElementById('contact-textarea');
+                    var msgBox = document.getElementById('msg-box');
+                        var pElement = document.getElementById('contact-error-msg');
+                       /* DESTROY ACCION */
+                        msgBox.removeChild(pElement);
+                        sideBar.removeChild(msgBox);
+                        divForm.removeChild(textArea);
+                        divForm.removeChild(input2);
+                        divForm.removeChild(input1);
+                        contactBox.removeChild(divForm);
+                        sideBar.removeChild(contactBox);
+                    clicked = 0;
+                    boxCleaner();      
+            }
+        }
+
+        aboutBar = function(){
+            
+            if(clicked == 0) {
+                /* Div Element Created on side-bar */
+                var divSideBar = document.createElement('div');
+                var id = document.createAttribute('Id');
+                    id.value = "img-profile";
+                    divSideBar.setAttributeNode(id);
+                var DivClass = document.createAttribute('class');
+                    DivClass.value = "img";
+                    divSideBar.setAttributeNode(DivClass);
+                var sideBar = document.getElementById('side-bar');
+                    sideBar.appendChild(divSideBar);
+        
+                        /* Div Element Created on img-profile */
+                        var divSideBar = document.createElement('img');
+                        var src = document.createAttribute('src');
+                            src.value = "images/me.jpg";
+                            divSideBar.setAttributeNode(src);
+                        var imgProfile = document.getElementById('img-profile');
+                            imgProfile.appendChild(divSideBar);
+        
+                /* Div Element Created on side-bar */
+                var divSideBar = document.createElement('div');
+                var id =  document.createAttribute('Id');
+                    id.value = "about-title";
+                    divSideBar.setAttributeNode(id);
+                var DivClass =  document.createAttribute('class');
+                    DivClass.value = "about-title";
+                    divSideBar.setAttributeNode(DivClass);
+                var sideBar = document.getElementById('side-bar');
+                    sideBar.appendChild(divSideBar);
+        
+                        /* H1 Element Created on about-title */
+                        var hOne = document.createElement('h1');
+                            hOne.innerText = "As-Webmaster";
+                        var aboutTitle = document.getElementById('about-title');
+                            aboutTitle.appendChild(hOne);
+        
+                /* Div Element Created on side-bar */
+                var divSideBar = document.createElement('div');
+                var id =  document.createAttribute('Id');
+                    id.value = "paragraph-profile";
+                    divSideBar.setAttributeNode(id);
+                var DivClass =  document.createAttribute('class');
+                    DivClass.value = "paragraph";
+                    divSideBar.setAttributeNode(DivClass);
+                var sideBar = document.getElementById('side-bar');
+                    sideBar.appendChild(divSideBar);
+        
+                        /* p Element Created on about-title */
+                        var pElement = document.createElement('p');
+                            pElement.innerText = "Estudiante permanente de Ciencias de Computación. He realizado cursos con HTML, CSS, postCSS, Bootstrap, Font-Awesome, JS, Ajax, PHP, MySQL, Vue.js, Prototipado, Git y Github, y sigo... tambien tengo amplia experiencia en Photophosp, Corel-Draw, Gravit Designer.";
+                        var paragrapgProfile = document.getElementById('paragraph-profile');
+                            paragrapgProfile.appendChild(pElement);
+                clicked = 1;
+                showSideBar();
+            } else {
+                boxCleaner();
+            }
+        }  
+
+        briefcaseBar = function(){
+                        
+            if(clicked==0) { 
+                
+                 
+                hiddenSideBar();
+                clicked = 2;
+                showSideBar();
+            } else {
+                boxCleaner();
+            }
+        }
+
+
+        contactBar = function(){
+            
+            if(clicked==0) {
+                /* Div Contact-box Element Created on side-bar */
+                var divSideBar = document.createElement('div');
+                var id = document.createAttribute('Id');
+                    id.value = "contact-box";
+                    divSideBar.setAttributeNode(id);
+                /*var DivClass = document.createAttribute('class');
+                    DivClass.value = "img";
+                    divSideBar.setAttributeNode(DivClass);*/
+                var sideBar = document.getElementById('side-bar');
+                    sideBar.appendChild(divSideBar);
+                
+                    /* Form Element Created on contact-box */
+                    var divForm = document.createElement('form');
+                    var id = document.createAttribute('Id');
+                        id.value = "form";
+                        divForm.setAttributeNode(id);
+                    var action = document.createAttribute('action');
+                        action.value = "";
+                        divForm.setAttributeNode(action);
+                    var method = document.createAttribute('method');
+                        method.value = "get";
+                        divForm.setAttributeNode(method);
+                    /*var DivClass = document.createAttribute('class');
+                        DivClass.value = "img";
+                        divSideBar.setAttributeNode(DivClass);*/
+                    var contactBox = document.getElementById('contact-box');
+                        contactBox.appendChild(divForm);
+
+                        /* INPUT Element Created on contact-box */
+                        var input = document.createElement('input');
+                        var att = document.createAttribute('name');
+                            att.value = "name";
+                            input.setAttributeNode(att);
+                        var att = document.createAttribute('type');
+                            att.value = "text";
+                            input.setAttributeNode(att);
+                        var att = document.createAttribute('placeholder');
+                            att.value = "Nombre Completo";
+                            input.setAttributeNode(att);
+                        var att = document.createAttribute('requiered');
+                            input.setAttributeNode(att);
+                        /*var DivClass = document.createAttribute('class');
+                            DivClass.value = "img";
+                            divSideBar.setAttributeNode(DivClass);*/
+                        var divForm = document.getElementById('form');
+                            divForm.appendChild(input);
+                        
+                        /* INPUT Element Created on contact-box */
+                        var input = document.createElement('input');
+                        var att = document.createAttribute('name');
+                            att.value = "email";
+                            input.setAttributeNode(att);
+                        var att = document.createAttribute('type');
+                            att.value = "email";
+                            input.setAttributeNode(att);
+                        var att = document.createAttribute('placeholder');
+                            att.value = "Correo Electronico";
+                            input.setAttributeNode(att);
+                        var att = document.createAttribute('requiered');
+                            input.setAttributeNode(att);
+                        /*var DivClass = document.createAttribute('class');
+                            DivClass.value = "img";
+                            divSideBar.setAttributeNode(DivClass);*/
+                        var divForm = document.getElementById('form');
+                            divForm.appendChild(input);
+
+                        /* TEXTAREA Element Created on contact-box */
+                        var textArea = document.createElement('textarea');
+                        var att = document.createAttribute('name');
+                            att.value = "contact-textarea-msg";
+                            textArea.setAttributeNode(att);
+                        var att = document.createAttribute('placeholder');
+                            att.value = "Escriba su mensaje aqui.";
+                            textArea.setAttributeNode(att);
+                        var att = document.createAttribute('requiered');
+                            textArea.setAttributeNode(att);
+                        var att = document.createAttribute('id');
+                            att.value = "contact-textarea";
+                            textArea.setAttributeNode(att);
+                        var divForm = document.getElementById('form');
+                            divForm.appendChild(textArea);
+                        
+                        /* INPUT Element Created on contact-box */
+                        var input = document.createElement('input');
+                        /*var id = document.createAttribute('Id');
+                            id.value = "";
+                            divForm.setAttributeNode(id);*/
+                        var att = document.createAttribute('type');
+                            att.value = "submit";
+                            input.setAttributeNode(att);
+                        var att = document.createAttribute('value');
+                            att.value = "Contactar";
+                            input.setAttributeNode(att);
+                        /*var DivClass = document.createAttribute('class');
+                            DivClass.value = "img";
+                            divSideBar.setAttributeNode(DivClass);*/
+                        var divForm = document.getElementById('form');
+                            divForm.appendChild(input);
+                
+                /* Div Message-box Element Created on side-bar */
+                var divSideBar = document.createElement('div');
+                var id = document.createAttribute('Id');
+                    id.value = "msg-box";
+                    divSideBar.setAttributeNode(id);
+                var DivClass = document.createAttribute('class');
+                    DivClass.value = "msg-box";
+                    divSideBar.setAttributeNode(DivClass);
+                var sideBar = document.getElementById('side-bar');
+                    sideBar.appendChild(divSideBar);
+                               
+                    /* p Element Created on message-box */
+                    var pElement = document.createElement('p');
+                    var att = document.createAttribute('Id');
+                        att.value = "contact-error-msg";
+                        pElement.setAttributeNode(att);
+                    var att = document.createAttribute('class');
+                        att.value = "contact-msg";
+                        pElement.setAttributeNode(att);
+                    var msgBox = document.getElementById('msg-box');
+                        msgBox.appendChild(pElement);
+
+                clicked = 3;
+                showSideBar();
+            } else {
+                boxCleaner();
+                }
+        }
     }());    
 
-    /* DOM Events */
-    document.getElementById("btn-about").onclick = function(){
-        var showBar =document.getElementById("side-bar");
-        showBar.removeAttribute("class");
-        var att = document.createAttribute("class");
-        att.value = "side-bar show";
-        showBar.setAttributeNode(att);
-    }  
-    
-    document.getElementById('arrow-box').onclick = clicked;
-    document.getElementById('left-arrow').onclick = clicked;
-    document.getElementById('wlc').onclick = clicked;
-    document.getElementById('foo').onclick = clicked;
-    function clicked(){
-        var showBar =document.getElementById("side-bar");
-        showBar.removeAttribute("class");
-        var att = document.createAttribute("class");
-        att.value = "side-bar hidden";
-        showBar.setAttributeNode(att);
-    }
+    /* DOM Auto-Events */
+
+    setTimeout(
+        function(){ 
+            /* Spinner DOM Elements*/
+            var spinner = document.getElementById("spinner");
+            var att = document.createAttribute('class');
+            att.value = "destroy";
+            /*element2.setAttributeNode(att);*/
+            spinner.setAttributeNode(att);
+        }, 2000);
     
     setTimeout(
         function(){ 
     var leftArrow = document.getElementById('left-arrow');
         leftArrow.removeAttribute('class');
-        var cls = document.createAttribute('class');
-        cls.value = "arrow vanish";
-        leftArrow.setAttributeNode(cls);
+        var arrowClass = document.createAttribute('class');
+        arrowClass.value = "arrow vanish";
+        leftArrow.setAttributeNode(arrowClass);
 
     var wlcText = document.getElementById('wlc-text');
         wlcText.removeAttribute('class');
-        var cls2 = document.createAttribute('class');
-        cls2.value = "vanish";
-        wlcText.setAttributeNode(cls2);
+    var wlcTextClass = document.createAttribute('class');
+        wlcTextClass.value = "vanish";
+        wlcText.setAttributeNode(wlcTextClass);
 
             setTimeout(function(){
-                cls.value = 'destroy';
-                cls2.value = 'destroy';
+                arrowClass.value = 'destroy';
+            var main = document.getElementById('main');
+            var arroBox = document.getElementById('arrow-box');
+                main.removeChild(arroBox);
+                wlcTextClass.value = 'destroy';
+            var wlc = document.getElementById('wlc');
+            var wlcClass = document.createAttribute('class');
+                wlcClass.value = "bienvenida logo-show";
+                wlc.setAttributeNode(wlcClass);
+            var foo = document.getElementById('foo');
+            var fooClass= document.createAttribute('class');
+                fooClass.value = "foo";
+                foo.setAttributeNode(fooClass);
             }, 3000);
 
-       }, 5000);
+        }, 5000);
+    
+    /* DOM EventListeners */
 
+    document.getElementById("btn-about").onclick = function(){
+        hiddenSideBar();
+        content = 1;
+        setTimeout(function(){
+            boxCleaner();
+        },500);
+    }
+    document.getElementById("btn-briefcase").onclick = function(){
+        hiddenSideBar();
+        content = 2;
+        setTimeout(function(){
+            boxCleaner();
+        },500);
+    }
+    document.getElementById("btn-contact").onclick = function(){
+        hiddenSideBar();
+        content = 3;
+        setTimeout(function(){
+            boxCleaner();
+        },500);
+    }
+    document.getElementById('wlc').onclick = hiddenSideBar;
+    document.getElementById('foo').onclick = hiddenSideBar;
 
-
-
-
-
-
+    /* VARIABLES */
+    var clicked = 0;
+    var content = 0;
 }
 
 

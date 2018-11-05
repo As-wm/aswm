@@ -8,7 +8,7 @@
       flex-direction: column;
       & li {
           position: relative;
-          left: -166px;
+          left: -10.4em;
           display: flex;
           list-style: none;
           min-height: 14px;

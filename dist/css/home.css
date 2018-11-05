@@ -113,7 +113,8 @@ main {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 100vh
+    height: 100vh;
+    transition: 1s
 }
 
 
@@ -185,6 +186,34 @@ main .arrow {
 
 
 
+.logo-show {
+    width: 100%;
+    background-image: url(../../images/logo-card.png);
+    background-repeat: no-repeat;
+    background-size: 14em;
+    background-position: center;
+    -webkit-animation-name: logo-show;
+            animation-name: logo-show;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;    
+}
+
+
+
+@-webkit-keyframes logo-show {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+
+@keyframes logo-show {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+
 .nav {
     display: block;
     position: fixed;
@@ -204,7 +233,7 @@ main .arrow {
 
 .nav ul li {
           position: relative;
-          left: -166px;
+          left: -10.4em;
           display: flex;
           list-style: none;
           min-height: 14px;
@@ -249,11 +278,12 @@ main .arrow {
 .side-bar {
   display: block;
   position: fixed;
-  right: -405px;
+  right: -25.7em;
   width: 30%;
+  max-width: 25.7em;
   min-width: 25em;
-  height: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 100%;
   background: rgba(73, 140, 138, 1);
   box-shadow: 0px 0px 5px 5px #c8e2e6;
   box-sizing: border-box;
@@ -261,11 +291,27 @@ main .arrow {
 
 
 
+.contact {
+  display: block;
+  position: fixed;
+  right: -25.7em;
+  width: 25.7em;
+  max-width: 25.7em;
+  min-width: 25.7em;
+  height: 100vh;
+  min-height: 100vh;
+  background: rgba(70, 172, 194, 1);
+  box-shadow: 0px 0px 5px 5px #c8e2e6;
+  box-sizing: border-box;
+}
+
+
+
 .show {
-    -webkit-transform: translate(-405px, 0px);
-            transform: translate(-405px, 0px);
+    -webkit-transform: translate(-25.7em, 0px);
+            transform: translate(-25.7em, 0px);
     position: relative;
-    transition: 1s;
+    transition: 1.5s;
     
 }
 
@@ -278,28 +324,32 @@ main .arrow {
 
 
 .hidden {
-    -webkit-transform: translate(405px, 0px);
-            transform: translate(405px, 0px);
+    -webkit-transform: translate(25.7em, 0px);
+            transform: translate(25.7em, 0px);
     position: fixed;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 
 
 .img {
     display: block;
-    width: 100%
+    margin: 0 auto;
+    width: 15em;
+    height: 15em
 }
 
 
 
 .img img {
         display: block;
+        width: 100%;
         border-radius: 15px;    
         box-sizing: border-box;
         margin: 20px auto;
         border: 5px solid rgb(247, 248, 250);
         box-shadow: 5px 5px 5px black;
+        overflow: hidden;
     }
 
 
