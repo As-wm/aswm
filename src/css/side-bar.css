@@ -114,6 +114,11 @@
         text-align: center;
     }
 }
+
+.contact-send-msg {
+    color: greenyellow;    
+}
+
 .contact-box {
     @apply --contact-box;
     & .contact-form {

@@ -11,4 +11,10 @@ body {
     overflow: hidden;
 }
 
+.old {
+    display: block;
+    position: absolute;
+    z-index: 1;    
+}
+
 

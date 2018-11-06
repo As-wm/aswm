@@ -6,12 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="dist/css/home.css">
+    <script src="src/js/functions.js"></script>
     <script src="src/js/home.js"></script>
     <title>As-wm</title>
 </head>
 <body>
-    <div id="spinner" >
+    <div id="spinner">
         <div class="loader">Loading...</div>
+    </div>
+    <div class="old">
+        <a href="http://www.as-wm.com/old/">Old Version</a>
     </div>
     <nav id="nav" class="nav">
         <ul id="ul">
@@ -36,11 +40,11 @@
     </main>
     <div id="side-bar" class="side-bar">
         <!-- <div id="contact-box" class="contact-box">
-            <form id="contact-form" action="" method="get" class="contact-form">
-                <input name="name" type="text" placeholder="Nombre Completo" requiered="">
-                <input name="email" type="email" placeholder="Correo Electronico" requiered="">
+            <form id="contact-form" action="send.php" target="_blank" method="get" class="contact-form">
+                <input id="name" name="name" type="text" placeholder="Nombre Completo" requiered="">
+                <input id="email" name="email" type="email" placeholder="Correo Electronico" requiered="">
                 <textarea name="contact-textarea" placeholder="Escriba su mensaje aqui." requiered="" id="contact-textarea"></textarea>
-                <input type="submit" value="Contactar">
+                <input type="submit" value="Contactar" onclick="return validarfomulario()">
             </form>
         </div>
         <div id="msg-box" class="msg-box">

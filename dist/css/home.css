@@ -109,6 +109,14 @@ body {
 
 
 
+.old {
+    display: block;
+    position: absolute;
+    z-index: 1;    
+}
+
+
+
 main {
     display: flex;
     flex-wrap: wrap;
@@ -412,6 +420,12 @@ main .arrow {
         font-weight: bold;
         text-align: center;
     }
+
+
+
+.contact-send-msg {
+    color: greenyellow;    
+}
 
 
 
