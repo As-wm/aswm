@@ -34,6 +34,20 @@
             </div>
         </footer>
     </main>
-    <div id="side-bar" class="side-bar"></div>
+    <div id="side-bar" class="side-bar">
+        <!-- <div id="contact-box" class="contact-box">
+            <form id="contact-form" action="" method="get" class="contact-form">
+                <input name="name" type="text" placeholder="Nombre Completo" requiered="">
+                <input name="email" type="email" placeholder="Correo Electronico" requiered="">
+                <textarea name="contact-textarea" placeholder="Escriba su mensaje aqui." requiered="" id="contact-textarea"></textarea>
+                <input type="submit" value="Contactar">
+            </form>
+        </div>
+        <div id="msg-box" class="msg-box">
+            <p id="contact-error-msg" class="contact-error-msg hidden">COMPLETE TODOS LOS CAMPOS</p>
+            <p id="contact-send-msg" class="contact-send-msg hidden">COMPLETE TODOS LOS CAMPOS</p>
+            <p id="contact-warning-msg" class="contact-warning-msg hidden">ESCRIBA UN EMAIL VALIDO</p>
+        </div> -->
+    </div>
 </body>
 </html>

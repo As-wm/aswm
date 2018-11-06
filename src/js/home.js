@@ -1,5 +1,8 @@
 window.onload = function(){
-    
+    /* VARIABLES */
+    var clicked = 0;
+    var content = 0;
+
     (function(){
 
         showSideBar = function() {
@@ -36,25 +39,31 @@ window.onload = function(){
                     clicked = 0;
                     boxCleaner();
                 } else if (clicked==2) {
-                    
+
                     clicked = 0;
                     boxCleaner();
                 } else if (clicked==3) {
                     var sideBar = document.getElementById("side-bar");
-                    var contactBox = document.getElementById("contact-box");
-                    var divForm = document.getElementById('form');
-                        var input1 = document.getElementsByTagName('input')[0];
-                        var input2 = document.getElementsByTagName('input')[1];
-                        var textArea = document.getElementById('contact-textarea');
-                    var msgBox = document.getElementById('msg-box');
-                        var pElement = document.getElementById('contact-error-msg');
+                        var contactBox = document.getElementById("contact-box");
+                            var divForm = document.getElementById('contact-form');
+                                var input1 = document.getElementsByTagName('input')[0];
+                                var input2 = document.getElementsByTagName('input')[1];
+                                var textArea = document.getElementById('contact-textarea');
+                                var submit = document.getElementById('submit');
+                        var msgBox = document.getElementById('msg-box');
+                            var pElement = document.getElementById('contact-error-msg');
+                            var pElement1 = document.getElementById('contact-send-msg');
+                            var pElement2 = document.getElementById('contact-warning-msg');
                        /* DESTROY ACCION */
-                        msgBox.removeChild(pElement);
+                            msgBox.removeChild(pElement2);
+                            msgBox.removeChild(pElement1);
+                            msgBox.removeChild(pElement);
                         sideBar.removeChild(msgBox);
-                        divForm.removeChild(textArea);
-                        divForm.removeChild(input2);
-                        divForm.removeChild(input1);
-                        contactBox.removeChild(divForm);
+                                divForm.removeChild(submit);
+                                divForm.removeChild(textArea);
+                                divForm.removeChild(input2);
+                                divForm.removeChild(input1);
+                            contactBox.removeChild(divForm);
                         sideBar.removeChild(contactBox);
                     clicked = 0;
                     boxCleaner();      
@@ -141,30 +150,30 @@ window.onload = function(){
             
             if(clicked==0) {
                 /* Div Contact-box Element Created on side-bar */
-                var divSideBar = document.createElement('div');
-                var id = document.createAttribute('Id');
-                    id.value = "contact-box";
-                    divSideBar.setAttributeNode(id);
-                /*var DivClass = document.createAttribute('class');
-                    DivClass.value = "img";
-                    divSideBar.setAttributeNode(DivClass);*/
+                var divContactBox = document.createElement('div');
+                var att = document.createAttribute('Id');
+                    att.value = "contact-box";
+                    divContactBox.setAttributeNode(att);
+                var att = document.createAttribute('class');
+                    att.value = "contact-box";
+                    divContactBox.setAttributeNode(att);
                 var sideBar = document.getElementById('side-bar');
-                    sideBar.appendChild(divSideBar);
+                    sideBar.appendChild(divContactBox);
                 
                     /* Form Element Created on contact-box */
                     var divForm = document.createElement('form');
-                    var id = document.createAttribute('Id');
-                        id.value = "form";
-                        divForm.setAttributeNode(id);
-                    var action = document.createAttribute('action');
-                        action.value = "";
-                        divForm.setAttributeNode(action);
-                    var method = document.createAttribute('method');
-                        method.value = "get";
-                        divForm.setAttributeNode(method);
-                    /*var DivClass = document.createAttribute('class');
-                        DivClass.value = "img";
-                        divSideBar.setAttributeNode(DivClass);*/
+                    var att = document.createAttribute('Id');
+                        att.value = "contact-form";
+                        divForm.setAttributeNode(att);
+                    var att = document.createAttribute('action');
+                        att.value = "";
+                        divForm.setAttributeNode(att);
+                    var att = document.createAttribute('method');
+                        att.value = "get";
+                        divForm.setAttributeNode(att);
+                    var att = document.createAttribute('class');
+                        att.value = "contact-form";
+                        divForm.setAttributeNode(att);
                     var contactBox = document.getElementById('contact-box');
                         contactBox.appendChild(divForm);
 
@@ -184,7 +193,7 @@ window.onload = function(){
                         /*var DivClass = document.createAttribute('class');
                             DivClass.value = "img";
                             divSideBar.setAttributeNode(DivClass);*/
-                        var divForm = document.getElementById('form');
+                        /*var divForm = document.getElementById('form');*/
                             divForm.appendChild(input);
                         
                         /* INPUT Element Created on contact-box */
@@ -203,13 +212,13 @@ window.onload = function(){
                         /*var DivClass = document.createAttribute('class');
                             DivClass.value = "img";
                             divSideBar.setAttributeNode(DivClass);*/
-                        var divForm = document.getElementById('form');
+                        /*var divForm = document.getElementById('form');*/
                             divForm.appendChild(input);
 
                         /* TEXTAREA Element Created on contact-box */
                         var textArea = document.createElement('textarea');
                         var att = document.createAttribute('name');
-                            att.value = "contact-textarea-msg";
+                            att.value = "contact-textarea";
                             textArea.setAttributeNode(att);
                         var att = document.createAttribute('placeholder');
                             att.value = "Escriba su mensaje aqui.";
@@ -219,14 +228,14 @@ window.onload = function(){
                         var att = document.createAttribute('id');
                             att.value = "contact-textarea";
                             textArea.setAttributeNode(att);
-                        var divForm = document.getElementById('form');
+                        /*var divForm = document.getElementById('form');*/
                             divForm.appendChild(textArea);
                         
                         /* INPUT Element Created on contact-box */
                         var input = document.createElement('input');
-                        /*var id = document.createAttribute('Id');
-                            id.value = "";
-                            divForm.setAttributeNode(id);*/
+                        var att = document.createAttribute('Id');
+                            att.value = "submit";
+                            input.setAttributeNode(att);
                         var att = document.createAttribute('type');
                             att.value = "submit";
                             input.setAttributeNode(att);
@@ -236,19 +245,19 @@ window.onload = function(){
                         /*var DivClass = document.createAttribute('class');
                             DivClass.value = "img";
                             divSideBar.setAttributeNode(DivClass);*/
-                        var divForm = document.getElementById('form');
+                        /*var divForm = document.getElementById('form');*/
                             divForm.appendChild(input);
                 
                 /* Div Message-box Element Created on side-bar */
-                var divSideBar = document.createElement('div');
-                var id = document.createAttribute('Id');
-                    id.value = "msg-box";
-                    divSideBar.setAttributeNode(id);
-                var DivClass = document.createAttribute('class');
-                    DivClass.value = "msg-box";
-                    divSideBar.setAttributeNode(DivClass);
+                var divMsgBox = document.createElement('div');
+                var att = document.createAttribute('Id');
+                    att.value = "msg-box";
+                    divMsgBox.setAttributeNode(att);
+                var att = document.createAttribute('class');
+                    att.value = "msg-box";
+                    divMsgBox.setAttributeNode(att);
                 var sideBar = document.getElementById('side-bar');
-                    sideBar.appendChild(divSideBar);
+                    sideBar.appendChild(divMsgBox);
                                
                     /* p Element Created on message-box */
                     var pElement = document.createElement('p');
@@ -256,7 +265,27 @@ window.onload = function(){
                         att.value = "contact-error-msg";
                         pElement.setAttributeNode(att);
                     var att = document.createAttribute('class');
-                        att.value = "contact-msg";
+                        att.value = "contact-error-msg hidden";
+                        pElement.setAttributeNode(att);
+                    var msgBox = document.getElementById('msg-box');
+                        msgBox.appendChild(pElement);
+
+                    var pElement = document.createElement('p');
+                    var att = document.createAttribute('Id');
+                        att.value = "contact-send-msg";
+                        pElement.setAttributeNode(att);
+                    var att = document.createAttribute('class');
+                        att.value = "contact-send-msg hidden";
+                        pElement.setAttributeNode(att);
+                    var msgBox = document.getElementById('msg-box');
+                        msgBox.appendChild(pElement);
+
+                    var pElement = document.createElement('p');
+                    var att = document.createAttribute('Id');
+                        att.value = "contact-warning-msg";
+                        pElement.setAttributeNode(att);
+                    var att = document.createAttribute('class');
+                        att.value = "contact-warning-msg hidden";
                         pElement.setAttributeNode(att);
                     var msgBox = document.getElementById('msg-box');
                         msgBox.appendChild(pElement);
@@ -337,11 +366,5 @@ window.onload = function(){
         },500);
     }
     document.getElementById('wlc').onclick = hiddenSideBar;
-    document.getElementById('foo').onclick = hiddenSideBar;
-
-    /* VARIABLES */
-    var clicked = 0;
-    var content = 0;
+    document.getElementById('foo').onclick = hiddenSideBar;  
 }
-
-
