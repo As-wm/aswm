@@ -1,23 +1,24 @@
 .nav {
-    display: block;
-    position: fixed;
-    width: 11em;
+    display: block;    
+    width: 0em;
     height: 100%;
     & ul {
       display: flex;
-      flex-direction: column;
+      flex-direction: column;      
       & li {
           position: relative;
-          left: -10.4em;
+          left: -10em;
           display: flex;
           list-style: none;
           min-height: 14px;
           padding: 20px 40px;
           margin: 20px 0px;
+          width: 5em;
           background: var(--second-color);
           border-radius: 0px 5px 5px 0px;
           border-right: 10px solid var(--font-color);
           transition: 0.5s;
+          z-index: 100;
           &:hover {
             position: relative;
             left: 0px;

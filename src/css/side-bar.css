@@ -1,17 +1,13 @@
 
 :root {
-    --side-bar {
-        background: yellow;
+    --side-bar {        
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: space-around;
-        align-items: center;
-        position: fixed;
-        right: -25.7em;
-        width: 45%;   
-        min-width: 15em; 
-        max-width: 25.7em;
+        align-items: center;                
+        width: 30%;   
+        min-width: 25em;         
         background: var(--second-color);
         box-shadow: 0px 0px 5px 5px #c8e2e6;
         box-sizing: border-box;        
@@ -19,8 +15,8 @@
     --side-bar-contact {
         display: block;
         position: fixed;
-        right: -25.7em;
-        width: 45%;        
+        /*right: -25.7em;*/
+        /*width: 45%;        */
         max-width: 25.7em;
         min-width: 15em;
         height: 100%;
@@ -37,23 +33,19 @@
 
 .side-bar {
     @apply --side-bar;
+    position: absolute;
+    right: -33em;
+    height: 100vh;
+    transition: 1s;    
 }
 .contact {
     @apply --side-bar-contact;
 }
-.show {
-    transform: translate(-25.7em, 0px);
-    position: relative;
+
+
+.trasladed {
+    position: relative;    
     transition: 1.5s;    
-}
-.destroy {
-    visibility: hidden;
-}
-.hidden {
-    transform: translate(25.7em, 0px);
-    position: fixed;
-    transition: 0.5s;
-    height: 100%;
 }
 .img {
     display: block;
@@ -116,7 +108,7 @@
         background: white;
         width: 80%;        
         max-width: 15.5em;
-        height: 90%;        
+        height: 25em;        
         border: 3px solid #9490BF;
         border-radius: 1em;
         background-image: radial-gradient(var(--primary-light-color), white 50%);
@@ -251,4 +243,13 @@
             }
         }
     }
+}
+
+.show {       
+    right: 0em;
+    transition: 1s;
+}
+.hidden {        
+    display: none;
+    position: absolute;    
 }

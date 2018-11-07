@@ -5,10 +5,11 @@
 
 body {
     display: flex;
+    flex-wrap: wrap;    
     background: var(--primary-color);
     font-family: 'system.ui', 'arial', 'sans-serif';
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: hidden;           
 }
 
 .old {

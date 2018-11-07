@@ -11,12 +11,12 @@
     <title>As-wm</title>
 </head>
 <body>
-    <div id="spinner">
+    <!-- <div id="spinner">
         <div class="loader">Loading...</div>
     </div>
     <div class="old">
         <a href="http://www.as-wm.com/old/">Old Version</a>
-    </div>
+    </div> -->
     <nav id="nav" class="nav">
         <ul id="ul">
             <li><a href="#"id="btn-about" >Sobre mi</a></li>
@@ -24,7 +24,7 @@
             <li><a href="#" id="btn-contact">Contacto</a></li>                
         </ul>
     </nav>
-    <main id="main">
+    <main id="main" class="whole-space">
         <div id="arrow-box" class="arrow-box">
             <div id="left-arrow" class="arrow"></div>
         </div>
@@ -38,7 +38,7 @@
             </div>
         </footer>
     </main>
-    <div id="side-bar" class="side-bar hidden">
+    <div id="side-bar" class="side-bar">
         <div id="briefcase-box" class="briefcase-box hidden">
             <div class="left-card"><<</div>
             <div id="bfc-card" class="bfc-card">

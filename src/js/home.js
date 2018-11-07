@@ -5,22 +5,31 @@ window.onload = function(){
    /* alert('THIS PAGE IS UNDER CONSTRUCTION!');*/
     (function(){
 
+        hiddenSideBar = function(){
+            var hiddenBar =document.getElementById("side-bar");
+                hiddenBar.removeAttribute("class");
+            var att = document.createAttribute("class");
+                att.value = "side-bar";            
+                hiddenBar.setAttributeNode(att);
+            var main = document.getElementById('main');
+                main.setAttribute("class","whole-space");                            
+        }
+
         showSideBar = function() {
             /* Add class show to side-bar */
-            var showBar =document.getElementById("side-bar");
-            showBar.removeAttribute("class");
-            var att = document.createAttribute("class");
-            att.value = "side-bar show";
-            showBar.setAttributeNode(att); 
+            var showBar = document.getElementById("side-bar");
+                    showBar.removeAttribute("class");
+                var att = document.createAttribute("class");
+                    att.value = "side-bar show";
+                    showBar.setAttributeNode(att);                  
+                var main = document.getElementById('main');
+                    main.removeAttribute("class");
+                var att = document.createAttribute("class");
+                    att.value = "main";
+                    main.setAttributeNode(att);                 
         } 
 
-        hiddenSideBar = function(){
-            var showBar =document.getElementById("side-bar");
-            showBar.removeAttribute("class");
-            var att = document.createAttribute("class");
-            att.value = "side-bar hidden";
-            showBar.setAttributeNode(att);
-        }
+ 
         
         boxCleaner = function(){
             if(clicked==0){
