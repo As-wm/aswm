@@ -38,20 +38,33 @@
             </div>
         </footer>
     </main>
-    <div id="side-bar" class="side-bar">
-        <!-- <div id="contact-box" class="contact-box">
-            <form id="contact-form" action="send.php" target="_blank" method="get" class="contact-form">
-                <input id="name" name="name" type="text" placeholder="Nombre Completo" requiered="">
-                <input id="email" name="email" type="email" placeholder="Correo Electronico" requiered="">
-                <textarea name="contact-textarea" placeholder="Escriba su mensaje aqui." requiered="" id="contact-textarea"></textarea>
-                <input type="submit" value="Contactar" onclick="return validarfomulario()">
-            </form>
+    <div id="side-bar" class="side-bar hidden">
+        <div id="briefcase-box" class="briefcase-box hidden">
+            <div class="left-card"><<</div>
+            <div id="bfc-card" class="bfc-card">
+                <div id="card-wrap" class="card-wrap">
+                    <div id="card-header" class="card-header">
+                        <h3>Old As-Webmaster Page</h3>
+                        <div class="card-img">
+                            <a href="http://www.as-wm.com/old" target="_blank"><img src="images/proyecto1.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div id="card-code-pic" class="card-code-pic">
+                        <img src="images/html5_logo.png" alt="html5">
+                        <img src="images/css3_logo.png" alt="css3">
+                        <img src="images/js_logo.png" alt="javascript">
+                        <img src="images/php7_logo.png" alt="php7">
+                    </div>
+                    <div id="card-description" class="card-description">
+                        <p>Primer website, creado principalmente con php.</p>
+                    </div>
+                    <div id="card-foo">
+                        <h2>As-Webmaster@2017</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="right-card">>></div>
         </div>
-        <div id="msg-box" class="msg-box">
-            <p id="contact-error-msg" class="contact-error-msg hidden">COMPLETE TODOS LOS CAMPOS</p>
-            <p id="contact-send-msg" class="contact-send-msg hidden">COMPLETE TODOS LOS CAMPOS</p>
-            <p id="contact-warning-msg" class="contact-warning-msg hidden">ESCRIBA UN EMAIL VALIDO</p>
-        </div> -->
     </div>
 </body>
 </html>

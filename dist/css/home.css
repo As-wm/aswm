@@ -93,8 +93,8 @@
 
 
 * {
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;    
 }
 
 
@@ -121,7 +121,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     transition: 1s
 }
 
@@ -284,14 +284,17 @@ main .arrow {
 
 
 .side-bar {
-  display: block;
+  background: yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+  align-items: center;
   position: fixed;
   right: -25.7em;
-  width: 30%;
+  width: 45%;  
+        min-width: 15em; 
   max-width: 25.7em;
-  min-width: 25em;
-  height: 100vh;
-  min-height: 100%;
   background: rgba(70, 172, 194, 1);
   box-shadow: 0px 0px 5px 5px #c8e2e6;
   box-sizing: border-box;
@@ -303,11 +306,11 @@ main .arrow {
   display: block;
   position: fixed;
   right: -25.7em;
-  width: 25.7em;
-  max-width: 25.7em;
-  min-width: 25.7em;
-  height: 100vh;
-  min-height: 100vh;
+  width: 45%;  
+        max-width: 25.7em;
+  min-width: 15em;
+  height: 100%;
+  min-height: 100%;
   background: rgba(70, 172, 194, 1);
   box-shadow: 0px 0px 5px 5px #c8e2e6;
   box-sizing: border-box;
@@ -319,8 +322,7 @@ main .arrow {
     -webkit-transform: translate(-25.7em, 0px);
             transform: translate(-25.7em, 0px);
     position: relative;
-    transition: 1.5s;
-    
+    transition: 1.5s;    
 }
 
 
@@ -336,13 +338,14 @@ main .arrow {
             transform: translate(25.7em, 0px);
     position: fixed;
     transition: 0.5s;
+    height: 100%;
 }
 
 
 
 .img {
     display: block;
-    margin: 0 auto;
+    margin: 1em auto;
     width: 15em;
     height: 15em
 }
@@ -373,6 +376,7 @@ main .arrow {
 
 
 .side-bar .about-title h1 {
+        margin-top: 0.5em;
         text-align: center; 
         color: #42F2F7;
         /*text-shadow: 5px 5px 5px var(--font-color);*/
@@ -398,6 +402,137 @@ main .arrow {
     padding: 20px 10px;
     font-size: 1.1em;    
     }
+
+
+
+/* BRIEFCASE SECTION*/
+
+
+
+.briefcase-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-around;
+    justify-content: center;    
+    background-color: rgba(73, 140, 138, 1);
+    width: 90%;
+    min-width: 12em;    
+    height: 70%;    
+    box-sizing: border-box
+}
+
+
+
+.briefcase-box .bfc-card {
+        background: white;
+        width: 80%;        
+        max-width: 15.5em;
+        height: 90%;        
+        border: 3px solid #9490BF;
+        border-radius: 1em;
+        background-image: radial-gradient(#42F2F7, white 50%)
+    }
+
+
+
+.briefcase-box .bfc-card .card-wrap {
+            width: 90%;
+            margin: 0 auto;
+            overflow: hidden
+    }
+
+
+
+.briefcase-box .bfc-card .card-wrap h3 {
+                padding: 0.2em 0px;
+                text-align: center;
+            }
+
+
+
+.briefcase-box .bfc-card .card-wrap .card-img {
+                outline: none;
+                background: black;
+                border-radius: 5px;
+                box-sizing: border-box
+            }
+
+
+
+.briefcase-box .bfc-card .card-wrap .card-img a {
+                    display: flex;                   
+                }
+
+
+
+.briefcase-box .bfc-card .card-wrap img {
+                border: 2px solid #9490BF;
+                border-radius: 5px;
+                width: 100%;
+                height: 100%;
+                box-sizing:border-box;
+                opacity: 0.9;
+                outline: none            
+            }
+
+
+
+.briefcase-box .bfc-card .card-wrap img:hover {
+                    opacity: 1;
+                }
+
+
+
+.briefcase-box .bfc-card .card-wrap .card-code-pic {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            align-content: space-around;
+            margin-top: 0.5em;
+            max-height: 2em
+        }
+
+
+
+.briefcase-box .bfc-card .card-wrap .card-code-pic > * {
+                width: 2em;
+                height: 2em;
+                margin: 0px 5px 0px;
+                text-align: center;
+                border: none;
+            }
+
+
+
+.briefcase-box .bfc-card .card-wrap .card-description {
+            display: flex;
+            margin-top: 0.5em;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 5px; 
+            min-height: 9em
+        }
+
+
+
+.briefcase-box .bfc-card .card-wrap .card-description p {
+                text-align: center;
+                color: rgba(77, 71, 48, 1);
+                font-weight: bold;
+                padding: 0.5em;
+            }
+
+
+
+.briefcase-box .bfc-card h2 {
+            color: #9490BF;
+            font-family: 'system.ui', 'Calibri';
+            text-align: center;
+            font-size: 1em;
+            padding: 0.5em;
+        }
 
 
 
@@ -511,7 +646,7 @@ footer .social-networks .caja-img {
             width: 10em;
             min-width: 8em;
             height: 7em;
-            margin: 10px 10px 0px 10px; /*up,right,down,left*/
+            margin: 15px 10px 0px 10px; /*up,right,down,left*/
             text-align: center
         }
 

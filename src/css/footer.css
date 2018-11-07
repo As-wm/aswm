@@ -10,7 +10,7 @@ footer {
             width: 10em;
             min-width: 8em;
             height: 7em;
-            margin: 10px 10px 0px 10px; /*up,right,down,left*/
+            margin: 15px 10px 0px 10px; /*up,right,down,left*/
             text-align: center;
             & .github {
                 width: 7em;

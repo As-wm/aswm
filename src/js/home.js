@@ -2,7 +2,7 @@ window.onload = function(){
     /* VARIABLES */
     var clicked = 0;
     var content = 0;
-    alert('THIS PAGE IS UNDER CONSTRUCTION!');
+   /* alert('THIS PAGE IS UNDER CONSTRUCTION!');*/
     (function(){
 
         showSideBar = function() {
@@ -39,7 +39,8 @@ window.onload = function(){
                     clicked = 0;
                     boxCleaner();
                 } else if (clicked==2) {
-
+                        var bfcBox = document.getElementById('briefcase-box');
+                            bfcBox.setAttribute('class','briefcase-box hidden');
                     clicked = 0;
                     boxCleaner();
                 } else if (clicked==3) {
@@ -52,11 +53,6 @@ window.onload = function(){
                                 var submit = document.getElementById('submit');
                         var msgBox = document.getElementById('msg-box');
                             var pElement = document.getElementById('status-msg');
-                            // var pElement1 = document.getElementById('contact-send-msg');
-                            // var pElement2 = document.getElementById('contact-warning-msg');
-                       /* DESTROY ACCION */
-                            // msgBox.removeChild(pElement2);
-                            // msgBox.removeChild(pElement1);
                             msgBox.removeChild(pElement);
                         sideBar.removeChild(msgBox);
                                 divForm.removeChild(submit);
@@ -135,8 +131,9 @@ window.onload = function(){
         briefcaseBar = function(){
                         
             if(clicked==0) { 
-                
-                 
+                var bfcBox = document.getElementById('briefcase-box');
+                    bfcBox.setAttribute('class','briefcase-box');
+
                 hiddenSideBar();
                 clicked = 2;
                 showSideBar();
@@ -147,7 +144,6 @@ window.onload = function(){
 
 
         contactBar = function(){
-            
             if(clicked==0) {
                 /* Div Contact-box Element Created on side-bar */
                 var divContactBox = document.createElement('div');
@@ -159,7 +155,7 @@ window.onload = function(){
                     divContactBox.setAttributeNode(att);
                 var sideBar = document.getElementById('side-bar');
                     sideBar.appendChild(divContactBox);
-                
+
                     /* Form Element Created on contact-box */
                     var divForm = document.createElement('form');
                     var att = document.createAttribute('onsubmit');
@@ -196,10 +192,6 @@ window.onload = function(){
                             input.setAttributeNode(att);
                         var att = document.createAttribute('requiered');
                             input.setAttributeNode(att);
-                        /*var DivClass = document.createAttribute('class');
-                            DivClass.value = "img";
-                            divSideBar.setAttributeNode(DivClass);*/
-                        /*var divForm = document.getElementById('form');*/
                             divForm.appendChild(input);
                         
                         /* INPUT Element Created on contact-box */
@@ -218,10 +210,6 @@ window.onload = function(){
                             input.setAttributeNode(att);
                         var att = document.createAttribute('requiered');
                             input.setAttributeNode(att);
-                        /*var DivClass = document.createAttribute('class');
-                            DivClass.value = "img";
-                            divSideBar.setAttributeNode(DivClass);*/
-                        /*var divForm = document.getElementById('form');*/
                             divForm.appendChild(input);
 
                         /* TEXTAREA Element Created on contact-box */
@@ -237,7 +225,6 @@ window.onload = function(){
                         var att = document.createAttribute('id');
                             att.value = "contact-textarea";
                             textArea.setAttributeNode(att);
-                        /*var divForm = document.getElementById('form');*/
                             divForm.appendChild(textArea);
                         
                         /* INPUT Element Created on contact-box */
@@ -251,10 +238,6 @@ window.onload = function(){
                         var att = document.createAttribute('value');
                             att.value = "Contactar";
                             input.setAttributeNode(att);                       
-                        /*var DivClass = document.createAttribute('class');
-                            DivClass.value = "img";
-                            divSideBar.setAttributeNode(DivClass);*/
-                        /*var divForm = document.getElementById('form');*/
                             divForm.appendChild(input);
                 
                 /* Div Message-box Element Created on side-bar */
@@ -279,26 +262,6 @@ window.onload = function(){
                     var msgBox = document.getElementById('msg-box');
                         msgBox.appendChild(pElement);
 
-                    // var pElement = document.createElement('p');
-                    // var att = document.createAttribute('Id');
-                    //     att.value = "contact-send-msg";
-                    //     pElement.setAttributeNode(att);
-                    // var att = document.createAttribute('class');
-                    //     att.value = "contact-send-msg hidden";
-                    //     pElement.setAttributeNode(att);
-                    // var msgBox = document.getElementById('msg-box');
-                    //     msgBox.appendChild(pElement);
-
-                    // var pElement = document.createElement('p');
-                    // var att = document.createAttribute('Id');
-                    //     att.value = "contact-warning-msg";
-                    //     pElement.setAttributeNode(att);
-                    // var att = document.createAttribute('class');
-                    //     att.value = "contact-warning-msg hidden";
-                    //     pElement.setAttributeNode(att);
-                    // var msgBox = document.getElementById('msg-box');
-                    //     msgBox.appendChild(pElement);
-
                 clicked = 3;
                 showSideBar();
             } else {
@@ -308,7 +271,6 @@ window.onload = function(){
     }());    
 
     /* DOM Auto-Events */
-
     setTimeout(
         function(){ 
             /* Spinner DOM Elements*/
