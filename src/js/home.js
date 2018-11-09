@@ -2,7 +2,7 @@ window.onload = function(){
     /* VARIABLES */
     var clicked = 0;
     var content = 0;
-   /* alert('THIS PAGE IS UNDER CONSTRUCTION!');*/
+    // alert('THIS PAGE IS UNDER CONSTRUCTION!');
     (function(){
 
         hiddenSideBar = function(){
@@ -37,14 +37,16 @@ window.onload = function(){
                     else if (content==2){briefcaseBar();}
                          else if (content==3) {contactBar();}
                 } else if (clicked==1) {
-                    var showBar = document.getElementById("side-bar");
+                    var sideBar = document.getElementById("side-bar");
+                    var profileBox = document.getElementById("profile-box");
                     var showBarImgProfile = document.getElementById('img-profile');
                     var showBarAboutTitle = document.getElementById('about-title');
                     var showBarParagraphProfile = document.getElementById('paragraph-profile');
                         /* DESTROY ACCION */
-                        showBar.removeChild(showBarImgProfile);
-                        showBar.removeChild(showBarAboutTitle);
-                        showBar.removeChild(showBarParagraphProfile);
+                        profileBox.removeChild(showBarImgProfile);
+                        profileBox.removeChild(showBarAboutTitle);
+                        profileBox.removeChild(showBarParagraphProfile);
+                        sideBar.removeChild(profileBox);
                     clicked = 0;
                     boxCleaner();
                 } else if (clicked==2) {
@@ -63,7 +65,7 @@ window.onload = function(){
                         var msgBox = document.getElementById('msg-box');
                             var pElement = document.getElementById('status-msg');
                             msgBox.removeChild(pElement);
-                        sideBar.removeChild(msgBox);
+                        contactBox.removeChild(msgBox);
                                 divForm.removeChild(submit);
                                 divForm.removeChild(textArea);
                                 divForm.removeChild(input2);
@@ -80,14 +82,24 @@ window.onload = function(){
             if(clicked == 0) {
                 /* Div Element Created on side-bar */
                 var divSideBar = document.createElement('div');
-                var id = document.createAttribute('Id');
-                    id.value = "img-profile";
-                    divSideBar.setAttributeNode(id);
-                var DivClass = document.createAttribute('class');
-                    DivClass.value = "img";
-                    divSideBar.setAttributeNode(DivClass);
+                var att = document.createAttribute('Id');
+                    att.value = "profile-box";
+                    divSideBar.setAttributeNode(att);
+                var att = document.createAttribute('class');
+                    att.value = "profile-box";
+                    divSideBar.setAttributeNode(att);
                 var sideBar = document.getElementById('side-bar');
                     sideBar.appendChild(divSideBar);
+
+                    var divImg = document.createElement('div');
+                    var att = document.createAttribute('Id');
+                        att.value = "img-profile";
+                        divImg.setAttributeNode(att);
+                    var att = document.createAttribute('class');
+                        att.value = "img";
+                        divImg.setAttributeNode(att);
+                    var profileBox = document.getElementById('profile-box');
+                        profileBox.appendChild(divImg);
         
                         /* Div Element Created on img-profile */
                         var divSideBar = document.createElement('img');
@@ -97,16 +109,16 @@ window.onload = function(){
                         var imgProfile = document.getElementById('img-profile');
                             imgProfile.appendChild(divSideBar);
         
-                /* Div Element Created on side-bar */
-                var divSideBar = document.createElement('div');
-                var id =  document.createAttribute('Id');
-                    id.value = "about-title";
-                    divSideBar.setAttributeNode(id);
-                var DivClass =  document.createAttribute('class');
-                    DivClass.value = "about-title";
-                    divSideBar.setAttributeNode(DivClass);
-                var sideBar = document.getElementById('side-bar');
-                    sideBar.appendChild(divSideBar);
+                    /* Div Element Created on side-bar */
+                    var divSideBar = document.createElement('div');
+                    var att =  document.createAttribute('Id');
+                        att.value = "about-title";
+                        divSideBar.setAttributeNode(att);
+                    var att =  document.createAttribute('class');
+                        att.value = "about-title";
+                        divSideBar.setAttributeNode(att);
+                    /*var sideBar = document.getElementById('side-bar');*/
+                        profileBox.appendChild(divSideBar);
         
                         /* H1 Element Created on about-title */
                         var hOne = document.createElement('h1');
@@ -116,14 +128,14 @@ window.onload = function(){
         
                 /* Div Element Created on side-bar */
                 var divSideBar = document.createElement('div');
-                var id =  document.createAttribute('Id');
-                    id.value = "paragraph-profile";
-                    divSideBar.setAttributeNode(id);
-                var DivClass =  document.createAttribute('class');
-                    DivClass.value = "paragraph";
-                    divSideBar.setAttributeNode(DivClass);
-                var sideBar = document.getElementById('side-bar');
-                    sideBar.appendChild(divSideBar);
+                var att =  document.createAttribute('Id');
+                    att.value = "paragraph-profile";
+                    divSideBar.setAttributeNode(att);
+                var att =  document.createAttribute('class');
+                    att.value = "paragraph";
+                    divSideBar.setAttributeNode(att);
+                /*var sideBar = document.getElementById('side-bar');*/
+                    profileBox.appendChild(divSideBar);
         
                         /* p Element Created on about-title */
                         var pElement = document.createElement('p');
@@ -257,8 +269,8 @@ window.onload = function(){
                 var att = document.createAttribute('class');
                     att.value = "msg-box";
                     divMsgBox.setAttributeNode(att);
-                var sideBar = document.getElementById('side-bar');
-                    sideBar.appendChild(divMsgBox);
+                var contactBox = document.getElementById('contact-box');
+                    contactBox.appendChild(divMsgBox);
                                
                     /* p Element Created on message-box */
                     var pElement = document.createElement('p');
@@ -312,7 +324,7 @@ window.onload = function(){
                 wlcTextClass.value = 'destroy';
             var wlc = document.getElementById('wlc');
             var wlcClass = document.createAttribute('class');
-                wlcClass.value = "bienvenida logo-show";
+                wlcClass.value = "welcome logo-show";
                 wlc.setAttributeNode(wlcClass);
             var foo = document.getElementById('foo');
             var fooClass= document.createAttribute('class');

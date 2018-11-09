@@ -1,17 +1,31 @@
 footer {
     display: flex;
     box-sizing: border-box;
-    width: 100%;
+    width: 100%;        
+    position: fixed;
+    bottom: 0;
+    height: 20vh;   
+    justify-content: center;
+    align-content: center;
     & .social-networks {
         display: flex;
-        margin: 0 auto;
+        margin: 0 auto;             
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        flex-direction: row;
+        align-items: center;
         & .caja-img {
-            display: block;
-            width: 10em;
-            min-width: 8em;
-            height: 7em;
-            margin: 15px 10px 0px 10px; /*up,right,down,left*/
+            display: flex;
+            max-width: 10em;
+            min-width: 7em;
+            height: 6em;
+            /*margin: 15px 10px 0px 10px; /*up,right,down,left*/
+            text-align: center;            
+            justify-content: center;
             text-align: center;
+            align-content: center;
+            flex-direction: column;
             & .github {
                 width: 7em;
                 height: 5em;

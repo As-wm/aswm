@@ -5,10 +5,11 @@ main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
+    align-content: center;
     width: 70%;
-    height: 100vh;
-    max-height: 100vh;
-    transition: 1s;
+    height: 100%;
+    transition: 1s;    
     & .arrow-box {
         width: 50%;
         min-width: 50%;
@@ -34,11 +35,10 @@ main {
     100% {left: 40%; top: 12em}    
 }
 
-.bienvenida {
+.welcome {
     width: 50%;
     min-width: 50%;
     height: 80vh;
-    
     & p {
         position: relative;
         top: 4em;
@@ -47,6 +47,15 @@ main {
      }
 }
 
+@media (--large-view) {
+    main {
+        width: 50%;
+    }
+    .foo {
+        position: relative;
+    }
+    
+}
 .destroy {
     visibility: hidden;
 }

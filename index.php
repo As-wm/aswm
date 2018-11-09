@@ -28,7 +28,7 @@
         <div id="arrow-box" class="arrow-box">
             <div id="left-arrow" class="arrow"></div>
         </div>
-        <div id="wlc" class="bienvenida"><p id="wlc-text" class="" >Bienvenido, </br> elige una opción</p></div>
+        <div id="wlc" class="welcome"><p id="wlc-text" class="" >Bienvenido, </br> elige una opción</p></div>
         <footer id="foo">
             <div class="social-networks">
                 <div class="caja-img"><a target="_blank" href="https://github.com/As-wm"><img class="github" src="images/github.png" alt="github"></a></div>
@@ -65,6 +65,8 @@
             </div>
             <div class="right-card">>></div>
         </div>
+        
     </div>
+    
 </body>
 </html>

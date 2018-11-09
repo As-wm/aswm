@@ -2,10 +2,11 @@
 :root {
     --side-bar {        
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         align-content: space-around;
-        align-items: center;                
+        align-items: center;                       
         width: 30%;   
         min-width: 25em;         
         background: var(--second-color);
@@ -26,10 +27,6 @@
         box-sizing: border-box;        
     }
 }
-@custom-media --extra-large-view (width => 960px);
-@custom-media --large-view (width < 960px);
-@custom-media --medium-view (width < 600px);
-@custom-media --small-view (width < 600px);
 
 .side-bar {
     @apply --side-bar;
@@ -38,10 +35,13 @@
     height: 100vh;
     transition: 1s;    
 }
-.contact {
-    @apply --side-bar-contact;
+@media (--large-view) {
+    .side-bar {
+        display: none;
+        visibility: none;
+    }
 }
-
+/* .contact { @apply --side-bar-contact; } */
 
 .trasladed {
     position: relative;    
@@ -188,8 +188,8 @@
     --contact-box {
         background: var(--third-color);
         width: 90%;
-        min-width: 22em;
-        margin: 2em auto auto;
+        min-width: 22em;        
+       /* margin: 2em auto auto;*/
     }
 }
 .msg-box {

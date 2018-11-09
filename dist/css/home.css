@@ -105,7 +105,9 @@ body {
     background: rgb(247, 248, 250);
     font-family: 'system.ui', 'arial', 'sans-serif';
     box-sizing: border-box;
-    overflow: hidden;           
+    overflow: hidden;
+    overflow-x: none;
+    overflow-y: scroll;                      
 }
 
 
@@ -128,9 +130,10 @@ main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
+    align-content: center;
     width: 70%;
-    height: 100vh;
-    max-height: 100vh;
+    height: 100%;
     transition: 1s
 }
 
@@ -179,7 +182,7 @@ main .arrow {
 
 
 
-.bienvenida {
+.welcome {
     width: 50%;
     min-width: 50%;
     height: 80vh
@@ -187,7 +190,7 @@ main .arrow {
 
 
 
-.bienvenida p {
+.welcome p {
         position: relative;
         top: 4em;
         font-size: 3em;
@@ -301,7 +304,8 @@ main .arrow {
 
 .side-bar {  
         display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: space-around;
   align-items: center;  
@@ -318,19 +322,7 @@ main .arrow {
 
 
 
-.contact {
-  display: block;
-  position: fixed;
-        /*right: -25.7em;*/
-        /*width: 45%;        */
-  max-width: 25.7em;
-  min-width: 15em;
-  height: 100%;
-  min-height: 100%;
-  background: rgba(70, 172, 194, 1);
-  box-shadow: 0px 0px 5px 5px #c8e2e6;
-  box-sizing: border-box;
-}
+/* .contact { @apply --side-bar-contact; } */
 
 
 
@@ -541,8 +533,8 @@ main .arrow {
 .msg-box {
   background: rgba(73, 140, 138, 1);
   width: 90%;
-  min-width: 22em;
-  margin: 2em auto auto
+  min-width: 22em        
+       /* margin: 2em auto auto;*/
 }
 
 
@@ -565,8 +557,8 @@ main .arrow {
 .contact-box {
   background: rgba(73, 140, 138, 1);
   width: 90%;
-  min-width: 22em;
-  margin: 2em auto auto
+  min-width: 22em        
+       /* margin: 2em auto auto;*/
 }
 
 
@@ -641,25 +633,39 @@ main .arrow {
 footer {
     display: flex;
     box-sizing: border-box;
-    width: 100%
+    width: 100%;        
+    position: fixed;
+    bottom: 0;
+    height: 20vh;   
+    justify-content: center;
+    align-content: center
 }
 
 
 
 footer .social-networks {
         display: flex;
-        margin: 0 auto
+        margin: 0 auto;             
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        flex-direction: row;
+        align-items: center
     }
 
 
 
 footer .social-networks .caja-img {
-            display: block;
-            width: 10em;
-            min-width: 8em;
-            height: 7em;
-            margin: 15px 10px 0px 10px; /*up,right,down,left*/
-            text-align: center
+            display: flex;
+            max-width: 10em;
+            min-width: 7em;
+            height: 6em;
+            /*margin: 15px 10px 0px 10px; /*up,right,down,left*/
+            text-align: center;            
+            justify-content: center;
+            text-align: center;
+            align-content: center;
+            flex-direction: column
         }
 
 
@@ -689,4 +695,24 @@ footer .social-networks .caja-img .twitter {
 footer .social-networks .caja-img .youtube {
                 width: 7em;
                 height: 5em;
-            } 
+            }
+
+
+
+@media (max-width: 1024px) {
+    main {
+        width: 50%;
+    }
+    .foo {
+        position: relative;
+    }
+  .nav {
+    display: none;
+    visibility: none;
+  }
+    .side-bar {
+        display: none;
+        visibility: none;
+    }
+    
+} 
