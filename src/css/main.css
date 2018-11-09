@@ -27,7 +27,7 @@ main {
         animation-name: arrow;
         animation-duration: 1s;
         animation-iteration-count: infinite;
-    }
+    }    
 }
 @keyframes arrow {
     0% {left: 40%; top: 12em}
@@ -35,6 +35,12 @@ main {
     100% {left: 40%; top: 12em}    
 }
 
+@media (--large-view) {
+    .arrow-box, .wlc-text, .vanish {
+        display: none;
+        visibility: none;
+    }
+}
 .welcome {
     width: 50%;
     min-width: 50%;
@@ -49,7 +55,7 @@ main {
 
 @media (--large-view) {
     main {
-        width: 50%;
+        width: 100%;
     }
     .foo {
         position: relative;

@@ -6,13 +6,14 @@ window.onload = function(){
     (function(){
 
         hiddenSideBar = function(){
+            /* SideBar Listener */
             var hiddenBar =document.getElementById("side-bar");
                 hiddenBar.removeAttribute("class");
             var att = document.createAttribute("class");
                 att.value = "side-bar";            
                 hiddenBar.setAttributeNode(att);
             var main = document.getElementById('main');
-                main.setAttribute("class","whole-space");                            
+                main.setAttribute("class","whole-space");                       
         }
 
         showSideBar = function() {
@@ -359,4 +360,6 @@ window.onload = function(){
     }
     document.getElementById('wlc').onclick = hiddenSideBar;
     document.getElementById('foo').onclick = hiddenSideBar;  
+
+    
 }

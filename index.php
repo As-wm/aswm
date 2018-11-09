@@ -17,8 +17,11 @@
     <div class="old">
         <a href="http://www.as-wm.com/old/">Old Version</a>
     </div> -->
+    <!-- <div id="float-nav" class="float-nav">
+        <div id="float-nav-wrap" class="float-nav-wrap"></div>
+    </div> -->
     <nav id="nav" class="nav">
-        <ul id="ul">
+        <ul id="ul" class="">
             <li><a href="#"id="btn-about" >Sobre mi</a></li>
             <li><a href="#" id="btn-briefcase">Portafolio</a></li>
             <li><a href="#" id="btn-contact">Contacto</a></li>                
@@ -28,7 +31,8 @@
         <div id="arrow-box" class="arrow-box">
             <div id="left-arrow" class="arrow"></div>
         </div>
-        <div id="wlc" class="welcome"><p id="wlc-text" class="" >Bienvenido, </br> elige una opción</p></div>
+        <div id="wlc" class="welcome">
+             <p id="wlc-text" class="wlc-text" >Bienvenido, </br> elige una opción</p></div>
         <footer id="foo">
             <div class="social-networks">
                 <div class="caja-img"><a target="_blank" href="https://github.com/As-wm"><img class="github" src="images/github.png" alt="github"></a></div>

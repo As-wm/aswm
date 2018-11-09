@@ -49,3 +49,72 @@
     visibility: none;
   }
 }
+
+/* FLOAT NAV */
+:root {
+  --nav {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      position: absolute;
+      left: 1em;
+      top: 1em;
+      width: 2em;
+      height: 2em;
+      background-color: var(--second-color);
+      border-radius: 5px; 
+  }
+}
+
+@media (--large-view) {
+
+    .nav ul li {
+      display: none;
+    }
+    .nav {
+        @apply --nav;        
+        &:active ul {
+        background-image: none;
+        transition: 1s;        
+        }
+        & ul {
+            display: flex;
+            width: 1.5em;          
+            height: 1.4em;
+            background-image: repeating-linear-gradient(var(--second-color)-1000%,white 50%);
+            background-size: 0.5em 0.5em;            
+            &:hover {
+              @apply --nav;
+              width: 10em;
+              height: 10em;
+              background-image: none;
+              transition: 1s;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              & li {
+                  all: initial;
+                  all: unset;                 
+                  display: flex;
+                  list-style: none;
+                  height: 14px;
+                  padding: 10px;
+                  background: #42F2F7;
+                  transition: 0.5s;
+                  margin: 5px;
+                  justify-content: center;
+                  border-radius: 5px;
+                  &:active {
+                    background: var(--third-color);
+                  }
+                  & a {
+                    font-weight: bold;
+                    text-align: center;
+                    text-decoration: none;
+                  }
+                }
+              }                   
+      }
+    }
+  }

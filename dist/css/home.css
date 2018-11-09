@@ -134,7 +134,7 @@ main {
     align-content: center;
     width: 70%;
     height: 100%;
-    transition: 1s
+    transition: 1s    
 }
 
 
@@ -299,6 +299,10 @@ main .arrow {
 .nav ul li:first-child {
         margin-top: 20vh;        
     }
+
+
+
+/* FLOAT NAV */
 
 
 
@@ -616,20 +620,6 @@ main .arrow {
 
 
 
-.show {       
-    right: 0em;
-    transition: 1s;
-}
-
-
-
-.hidden {        
-    display: none;
-    position: absolute;    
-}
-
-
-
 footer {
     display: flex;
     box-sizing: border-box;
@@ -699,9 +689,27 @@ footer .social-networks .caja-img .youtube {
 
 
 
+.show {       
+    right: 0em;
+    transition: 1s;
+}
+
+
+
+.hidden {        
+    display: none;
+    position: absolute;    
+}
+
+
+
 @media (max-width: 1024px) {
+    .arrow-box, .wlc-text, .vanish {
+        display: none;
+        visibility: none;
+    }
     main {
-        width: 50%;
+        width: 100%;
     }
     .foo {
         position: relative;
@@ -710,9 +718,77 @@ footer .social-networks .caja-img .youtube {
     display: none;
     visibility: none;
   }
+
+    .nav ul li {
+      display: none;
+    }
+    .nav {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  width: 2em;
+  height: 2em;
+  background-color: rgba(70, 172, 194, 1);
+  border-radius: 5px
+    }        
+        .nav:active ul {
+        background-image: none;
+        transition: 1s;        
+        }
+        .nav ul {
+            display: flex;
+            width: 1.5em;          
+            height: 1.4em;
+            background-image: repeating-linear-gradient(rgba(70, 172, 194, 1)-1000%,white 50%);
+            background-size: 0.5em 0.5em                   
+      }            
+            .nav ul:hover {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  width: 2em;
+  height: 2em;
+  background-color: rgba(70, 172, 194, 1);
+  border-radius: 5px;
+              width: 10em;
+              height: 10em;
+              background-image: none;
+              transition: 1s;
+              display: flex;
+              flex-direction: column;
+              justify-content: center
+              }
+              .nav ul:hover li {
+                  all: initial;
+                  all: unset;                 
+                  display: flex;
+                  list-style: none;
+                  height: 14px;
+                  padding: 10px;
+                  background: #42F2F7;
+                  transition: 0.5s;
+                  margin: 5px;
+                  justify-content: center;
+                  border-radius: 5px
+                }
+                  .nav ul:hover li:active {
+                    background: rgba(73, 140, 138, 1);
+                  }
+                  .nav ul:hover li a {
+                    font-weight: bold;
+                    text-align: center;
+                    text-decoration: none;
+                  }
     .side-bar {
         display: none;
         visibility: none;
     }
-    
 } 

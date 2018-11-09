@@ -1,4 +1,20 @@
 
+         function expandNav() {
+                var nav = document.getElementById('nav');
+                    nav.setAttribute('class', 'expand-nav'),            
+                    document.getElementById('ul').setAttribute('class','');            
+        }
+        
+    
+            var dd = function() {
+                /* Expand-nav Listener */
+                var navBar =document.getElementById("nav");
+                    navBar.removeAttribute("class");
+                var att = document.createAttribute("class");
+                    att.value = "nav";            
+                    nav.setAttributeNode(att); 
+            }
+
         function validarFormulario() {
             
             var usuario = document.getElementById('name').value;

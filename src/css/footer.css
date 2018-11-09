@@ -46,3 +46,12 @@ footer {
         }
     }
 }
+
+.show {       
+    right: 0em;
+    transition: 1s;
+}
+.hidden {        
+    display: none;
+    position: absolute;    
+}
