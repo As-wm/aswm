@@ -11,15 +11,13 @@
     <title>As-wm</title>
 </head>
 <body>
-    <!-- <div id="spinner">
+    <div id="spinner">
         <div class="loader">Loading...</div>
     </div>
     <div class="old">
         <a href="http://www.as-wm.com/old/">Old Version</a>
-    </div> -->
-    <!-- <div id="float-nav" class="float-nav">
-        <div id="float-nav-wrap" class="float-nav-wrap"></div>
-    </div> -->
+    </div>
+    
     <nav id="nav" class="nav">
         <ul id="ul" class="">
             <li><a href="#"id="btn-about" >Sobre mi</a></li>

@@ -2,7 +2,7 @@ window.onload = function(){
     /* VARIABLES */
     var clicked = 0;
     var content = 0;
-    // alert('THIS PAGE IS UNDER CONSTRUCTION!');
+    alert('THIS PAGE IS UNDER CONSTRUCTION!');
     (function(){
 
         hiddenSideBar = function(){

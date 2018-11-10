@@ -714,6 +714,11 @@ footer .social-networks .caja-img .youtube {
     .foo {
         position: relative;
     }
+    .old {
+        display: block;
+        position: absolute;
+        right: 0em;
+    }
   .nav {
     display: none;
     visibility: none;
@@ -727,7 +732,7 @@ footer .social-networks .caja-img .youtube {
   justify-content: center;
   align-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   left: 1em;
   top: 1em;
   width: 2em;
@@ -751,7 +756,7 @@ footer .social-networks .caja-img .youtube {
   justify-content: center;
   align-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   left: 1em;
   top: 1em;
   width: 2em;

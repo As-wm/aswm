@@ -60,7 +60,11 @@ main {
     .foo {
         position: relative;
     }
-    
+    .old {
+        display: block;
+        position: absolute;
+        right: 0em;
+    }
 }
 .destroy {
     visibility: hidden;
