@@ -53,29 +53,11 @@ main {
      }
 }
 
-@media (--large-view) {
-    main {
-        width: 100%;
-    }
-    .foo {
-        position: relative;
-    }
-    
-}
-.destroy {
-    visibility: hidden;
-}
-
-.vanish {
-    opacity: 0 !important;
-    transition: 3s;
-}
-
 .logo-show {
     width: 100%;
     background-image: url(../../images/logo-card.png);
     background-repeat: no-repeat;
-    background-size: 14em;
+    background-size: 24em;
     background-position: center;
     animation-name: logo-show;
     animation-duration: 1s;    
@@ -84,4 +66,10 @@ main {
 @keyframes logo-show {
     0% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+@media (--large-view) {
+    main {
+        width: 100%;
+    }    
 }
