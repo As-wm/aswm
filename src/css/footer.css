@@ -2,11 +2,13 @@ footer {
     display: flex;
     box-sizing: border-box;
     width: 100%;        
-    position: fixed;
+    /*position: fixed;*/
     bottom: 0;
     height: 20vh;   
     justify-content: center;
     align-content: center;
+    background: var(--primary-color);
+    z-index: 9;
     & .social-networks {
         display: flex;
         margin: 0 auto;             
@@ -18,9 +20,8 @@ footer {
         & .caja-img {
             display: flex;
             max-width: 10em;
-            min-width: 7em;
-            height: 6em;
-            /*margin: 15px 10px 0px 10px; /*up,right,down,left*/
+            min-width: 5em;
+            height: 5em;            
             text-align: center;            
             justify-content: center;
             text-align: center;
@@ -47,11 +48,60 @@ footer {
     }
 }
 
-.show {       
+.show {     
+    position: absolute;  
     right: 0em;
-    transition: 1s;
+    /*transform: translate(0em);*/
+    transition: 1.5s;
+    height: 100vh;
 }
 .hidden {        
     display: none;
     position: absolute;    
+}
+.trasladed {
+    display: flex;
+    position: absolute;
+    right: 0em;    
+    transform:
+     translate(100em);
+    transition: 1.5s;
+    height: 100%;    
+}
+.destroy {
+    visibility: hidden;
+}
+.vanish {
+    opacity: 0 !important;
+    transition: 3s;
+}
+
+@media (--large-view) {
+    .foo {
+        position: fixed;
+        min-height: 5em;             
+        height: 0vh;
+        z-index: 14;
+    }
+    footer .social-networks .caja-img {
+        width: 5em;
+        height: 3em;
+    & .github {
+        width: 4em;
+        height: 3em;
+        }
+    & .facebook {
+        width: 5em;
+        height: 3em;
+    }
+    & .twitter {
+        width: 3em;
+        height: 2em;
+        margin-top: 5px;
+    }
+    & .youtube {
+        width: 5em;
+        height: 3em;
+    }
+}
 }

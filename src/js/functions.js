@@ -15,13 +15,13 @@
                     nav.setAttributeNode(att); 
             }
 
-        function validarFormulario() {
+        function validarSubmit() {
             
-            var usuario = document.getElementById('name').value;
+            var name = document.getElementById('name').value;
             var email = document.getElementById('email').value;
             var textArea = document.getElementById('contact-textarea').value;
                                     
-                if ((usuario == null ) || (usuario == "")){                    
+                if ((name == null ) || (name == "")){                    
                     var MsgBox = document.getElementById('msg-box');
                         MsgBox.removeAttribute('class');
                     var att = document.createAttribute('class');
@@ -76,6 +76,16 @@
                                             MsgBox.setAttributeNodeNS(att);                                        
                                     },1000);      
                                         
+                                    $.post('contacto.php',{
+                                        name: name,
+                                        email: email,
+                                        message: textArea
+                                    },
+                                    function(respuesta){                                        
+                                        respuesta.preventDefault;
+                                    },
+                                    "html"
+                                    );                                    
                                     return true;
                                 }
         }

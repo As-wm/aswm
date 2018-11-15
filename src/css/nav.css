@@ -1,5 +1,6 @@
 .nav {
-    display: block;    
+    display: block; 
+    position: absolute;   
     width: 0em;
     height: 100%;
     & ul {
@@ -18,7 +19,7 @@
           border-radius: 0px 5px 5px 0px;
           border-right: 10px solid var(--font-color);
           transition: 0.5s;
-          z-index: 100;
+          z-index: 8;
           &:hover {
             position: relative;
             left: 0px;
@@ -43,12 +44,6 @@
     
 }
 
-@media (--large-view){
-  .nav {
-    display: none;
-    visibility: none;
-  }
-}
 
 /* FLOAT NAV */
 :root {
@@ -64,15 +59,22 @@
       height: 2em;
       background-color: var(--second-color);
       border-radius: 5px; 
+      position: fixed;
+      z-index: 19;
   }
 }
 
 @media (--large-view) {
-
+      
+    .nav {
+      display: none;
+      visibility: none;
+    }
+    
     .nav ul li {
       display: none;
     }
-    .nav {
+    .nav  {
         @apply --nav;        
         &:active ul {
         background-image: none;
@@ -114,7 +116,7 @@
                     text-decoration: none;
                   }
                 }
-              }                   
-      }
-    }
+            }                        
+          }
+        }    
   }
