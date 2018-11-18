@@ -8,13 +8,13 @@
       flex-direction: column;      
       & li {
           position: relative;
-          left: -10em;
+          left: -9.5em;
           display: flex;
           list-style: none;
           min-height: 14px;
           padding: 20px 40px;
           margin: 20px 0px;
-          width: 5em;
+          width: 10em;
           background: var(--second-color);
           border-radius: 0px 5px 5px 0px;
           border-right: 10px solid var(--font-color);

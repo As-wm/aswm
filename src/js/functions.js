@@ -52,7 +52,7 @@
                                 MsgBox.removeAttribute('class');
                             var att = document.createAttribute('class');
                                 att.value = "msg-box vanish";
-                                MsgBox.setAttributeNodeNS(att);                                        
+                                MsgBox.setAttributeNodeNS(att); 
                             },1000);                                 
                                
                                 return false;
@@ -76,7 +76,7 @@
                                             MsgBox.setAttributeNodeNS(att);                                        
                                     },1000);      
                                         
-                                    $.post('contacto.php',{
+                                    $.post('contacto.php',{ 
                                         name: name,
                                         email: email,
                                         message: textArea

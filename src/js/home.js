@@ -28,8 +28,6 @@ window.onload = function(){
                     att.value = "main";
                     main.setAttributeNode(att);                 
         } 
-
- 
         
         boxCleaner = function(){
             if(clicked==0){
@@ -81,7 +79,6 @@ window.onload = function(){
                 boxCleaner();
             }
         }
-
 
         contactBar = function(){
             if(clicked==0) {
@@ -141,45 +138,58 @@ window.onload = function(){
         }, 5000);
     
     /* DOM EventListeners */
+            
+    function responsiveDesign(){
+        var navWindow = $(window).width();        
+            if(navWindow<1025 || screen.width<1025) {
+          $('#btn-about').attr('href', '#profile-box');           
+          $('#btn-briefcase').attr('href', '#briefcase-box');
+          $('#btn-contact').attr('href', '#contact-box');
+            hiddenSideBar();
+            document.getElementById("btn-about").onclick = function(){}
+            document.getElementById("btn-briefcase").onclick = function(){}
+            document.getElementById("btn-contact").onclick = function(){}
+            document.getElementById('wlc').onclick = function(){}
+            document.getElementById('foo').onclick = function(){}
 
-    document.getElementById("btn-about").onclick = function(){
-        if(screen.width>1024) {
-            hiddenSideBar();
-            content = 1;
-            setTimeout(function(){
-                boxCleaner();
-            },500);
-        }
-    }
-    document.getElementById("btn-briefcase").onclick = function(){
-        if(screen.width>1024) {
-            hiddenSideBar();
-            content = 2;
-                setTimeout(function(){
-                    boxCleaner();
-                },500);
+        } else {
+            $('#btn-about').attr('href', '#');           
+            $('#btn-briefcase').attr('href', '#');
+            $('#btn-contact').attr('href', '#');         
+
+            document.getElementById("btn-about").onclick = function(){
+                    hiddenSideBar();
+                    content = 1;
+                    setTimeout(function(){
+                        boxCleaner();
+                    },500);
             }
-        }
-    document.getElementById("btn-contact").onclick = function(){
-        if(screen.width>1024) {
-            hiddenSideBar();
-            content = 3;
-            setTimeout(function(){
-                boxCleaner();
-                },500);
+            document.getElementById("btn-briefcase").onclick = function(){
+                    hiddenSideBar();
+                    content = 2;
+                        setTimeout(function(){
+                            boxCleaner();
+                        },500);
             }
-        }
+            document.getElementById("btn-contact").onclick = function(){
+                    hiddenSideBar();
+                    content = 3;
+                    setTimeout(function(){
+                        boxCleaner();
+                        },500);
+            }
+            document.getElementById('wlc').onclick = function(){
+                    hiddenSideBar();
+            }
+            document.getElementById('foo').onclick = function(){
+                    hiddenSideBar();
+            }
+        }   
+    } 
     
-        document.getElementById('wlc').onclick = function(){
-            if(screen.width>1024) {
-                hiddenSideBar();
-            }
-        }
-        document.getElementById('foo').onclick = function(){
-            if(screen.width>1024) {
-                hiddenSideBar();
-            }
-        }
-        
+    $(window).resize(function(){ 
+          responsiveDesign();
+     });
     
+     responsiveDesign();
 }

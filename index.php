@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="dist/css/home.css">    
     <script src="src/js/jquery-3.3.1.min.js"></script>
+    <script src="src/js/transition.js"></script>
     <script src="src/js/functions.js"></script>
     <script src="src/js/home.js"></script>
     <title>As-wm</title>
@@ -21,7 +22,7 @@
     
     <nav id="nav" class="nav">
         <ul id="ul" class=""> 
-            <li><a href="#"id="btn-about">Sobre mi</a></li>            
+            <li><a href="#" id="btn-about">Sobre mi</a></li>            
             <li><a href="#" id="btn-briefcase">Portafolio</a></li>            
             <li><a href="#" id="btn-contact">Contacto</a></li>            
         </ul>        

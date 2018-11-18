@@ -96,6 +96,8 @@
 * {
     margin: 0;
     padding: 0;    
+    box-sizing: border-box; 
+   
 }
 
 
@@ -106,7 +108,7 @@ body {
     flex-wrap: wrap;    
     background: rgb(247, 248, 250);
     font-family: 'system.ui', 'arial', 'sans-serif';
-    box-sizing: border-box;
+    
     overflow: hidden;
     overflow-x: none;
     overflow-y: scroll; 
@@ -248,13 +250,13 @@ main .arrow {
 
 .nav ul li {
           position: relative;
-          left: -10em;
+          left: -9.5em;
           display: flex;
           list-style: none;
           min-height: 14px;
           padding: 20px 40px;
           margin: 20px 0px;
-          width: 5em;
+          width: 10em;
           background: rgba(70, 172, 194, 1);
           border-radius: 0px 5px 5px 0px;
           border-right: 10px solid rgba(77, 71, 48, 1);
@@ -306,8 +308,7 @@ main .arrow {
         width: 30%;
   min-width: 25em;  
         background: rgba(70, 172, 194, 1);
-  box-shadow: 0px 0px 5px 5px #c8e2e6;
-  box-sizing: border-box;        
+  box-shadow: 0px 0px 5px 5px #c8e2e6;        
     transition: 1s;
     z-index: 11;   
 }
@@ -334,7 +335,7 @@ main .arrow {
         display: block;
         width: 100%;
         border-radius: 15px;    
-        box-sizing: border-box;
+        
         margin: 20px auto;
         border: 5px solid rgb(247, 248, 250);
         box-shadow: 5px 5px 5px black;
@@ -397,7 +398,7 @@ main .arrow {
     min-width: 12em;    
     height: 80%;    
     border-radius: 5px;
-    box-sizing: border-box;    
+        
     overflow: hidden
 }
 
@@ -511,7 +512,7 @@ main .arrow {
                 outline: none;
                 background: black;
                 border-radius: 1em;
-                box-sizing: border-box;
+                
                 width: 90%;
                 height: 9em
             }
@@ -529,7 +530,7 @@ main .arrow {
                 border-radius: 5px;
                 width: 100%;
                 height: 9em;
-                box-sizing:border-box;
+                
                 opacity: 0.9;
                 outline: none            
             }
@@ -638,7 +639,7 @@ main .arrow {
         display: flex;
         flex-direction: column;                
         overflow: hidden;
-        box-sizing: border-box;
+        
         width: 90%;
         margin: auto
     }

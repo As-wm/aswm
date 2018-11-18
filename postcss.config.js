@@ -12,6 +12,6 @@ module.exports = {
         require('postcss-nesting'),
         require('postcss-font-magician'),
         require('css-mqpacker'),
-       /* require('cssnano'),*/
+        // require('cssnano'),
     ]
   }
